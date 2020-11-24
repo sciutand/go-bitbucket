@@ -167,7 +167,7 @@ func (c *Client) executeRaw(method string, urlStr string, text string) (io.ReadC
 	return c.doRawRequest(req, false)
 }
 
-func (c *Client) execute(method string, urlStr string, text string) (interface{}, error) {
+func (c *Client) Execute(method string, urlStr string, text string) (interface{}, error) {
 	// Use pagination if changed from default value
 	const DEC_RADIX = 10
 	if strings.Contains(urlStr, "/repositories/") {
